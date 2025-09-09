@@ -65,7 +65,39 @@
         </section>
   </header>
 
-  <main class="bg-[#f0fdf4]">
+  <main id="choose" class="bg-[#f0fdf4]">
+    <h1 class="text-3xl text-center font-semibold pt-25">
+      Choose Your Trees
+    </h1>
+    <section class="px-4 py-20 lg:px-0 lg:w-10/12 lg:mx-auto gap-6 grid grid-cols-1 lg:grid-cols-6">
+      <div id="categories" class="lg:col-span-1">
+        <h1 class="font-bold text-2xl">Categories</h1>
+        <div id="categories-container">
+          <h1 class="text-left text-xl mt-3 col-span-full">
+            <span class="loading loading-spinner loading-md"></span>
+          </h1>
+        </div>
+      </div>
+
+      <div id="card" class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:col-span-4"></div>
+      <div class="bg-white shadow-sm col-span-1 p-4 rounded-lg lg:overflow-x-auto lg:h-134">
+        <h1 class="font-bold text-2xl py-4">Your Cart</h1>
+        <div id="cart"></div>
+
+        <div>
+          <hr class="border-1 border-gray-300" />
+          <div class="flex justify-between">
+            <h2 class="font-bold">Total</h2>
+            <h2 id="total-price" class="font-bold">
+              <i class="fa-solid fa-bangladeshi-taka-sign"></i>
+              <span id="total-value">0</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section id="about" class="py-25 bg-[#f0fdf4]">
       <h2 class="text-3xl font-medium text-center mb-10">
         About the Campaign
@@ -128,6 +160,11 @@
         </button>
       </form>
     </section>
+
+    <!-- modal part-->
+    <dialog id="tree-details" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box" id="tree-details-content"></div>
+    </dialog>
   </main>
     <footer class="bg-[#14532d]">
     <p class="text-center text-white py-6">
